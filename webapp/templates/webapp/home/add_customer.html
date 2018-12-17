@@ -1,0 +1,32 @@
+{% extends 'webapp/base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <h1 style="width: 100%; margin: 20px; text-align: center">New Customer</h1>
+
+    <hr>
+
+    <form action="{% url 'webapp:add_customer' %}" method="POST">
+        <div class="form-group">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Customer Name</label>
+                {% render_field form.name class+="form-control"%}
+            </div>
+            <div class="form-group">
+                <label for="CustomerID">Customer ID</label>
+                {% render_field form.CustomerID class+="form-control"%}
+            </div>
+
+            <div class="form-group" style="display: flex; justify-content: space-around; margin: 40px">
+                <a href="{% url 'webapp:add_customer' %}" type="button" class="btn btn-secondary">
+                    Back
+                </a>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
