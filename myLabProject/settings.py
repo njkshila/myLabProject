@@ -77,12 +77,9 @@ WSGI_APPLICATION = 'myLabProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'lab_project',
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'zillur',
-        'PASSWORD': 'asdfghjkl',
         'OPTIONS': {
-          'autocommit': True,
+            'read_default_file': os.path.join(BASE_DIR, 'my.cnf'),
         },
     }
 }

@@ -16,10 +16,25 @@
                 {% render_field form.name class+="form-control"%}
             </div>
             <div class="form-group">
-                <label for="CustomerID">Customer ID</label>
-                {% render_field form.CustomerID class+="form-control"%}
+                <label for="sex">Sex</label>
+                {% render_field form.sex class+="form-control"%}
             </div>
-
+            <div class="form-group">
+                <label for="birthdate">Birth Date</label>
+                {% render_field form.birthdate class+="form-control"%}
+            </div>
+            <div class="form-group">
+                <label for="mstatus">Marital Status</label>
+                {% render_field form.mstatus class+="form-control"%}
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                {% render_field form.phone class+="form-control"%}
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                {% render_field form.email class+="form-control"%}
+            </div>
             <div class="form-group" style="display: flex; justify-content: space-around; margin: 40px">
                 <a href="{% url 'webapp:add_customer' %}" type="button" class="btn btn-secondary">
                     Back
